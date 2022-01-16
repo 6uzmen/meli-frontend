@@ -16,7 +16,6 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     font-size: 1rem;
     font-weight: 500;
-    font-family: Roboto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
