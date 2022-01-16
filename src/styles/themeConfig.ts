@@ -11,6 +11,7 @@ export const defaultTheme: DefaultTheme = {
 export const GlobalStyles = createGlobalStyle`
   html, body {
     font-family: ${({ theme }) => theme.fontFamily};
+    background-color: ${({ theme }) => theme.body};
     transition: all 0.50s linear;
     padding: 0;
     margin: 0;
@@ -30,6 +31,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   input {
+    font-size: 18px;
     padding: 0 20px;
     border: none;
     outline: none;

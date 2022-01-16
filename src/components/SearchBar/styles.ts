@@ -11,12 +11,14 @@ export const SearchBarContainer = styled.div`
 export const SearchInput = styled.input`
   flex-grow: 1;
   background-color: white;
-  font-size: 18px;
 `;
 
 export const SearchButton = styled.button`
   height: 40px;
   width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: ${(p) => p.theme.body};
 `;
 
