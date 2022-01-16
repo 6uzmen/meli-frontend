@@ -3,6 +3,9 @@ import styled from 'styled-components';
 export const SearchBarContainer = styled.div`
   display: flex;
   flex-grow: 1;
+  min-width: fit-content;
+  overflow: hidden;
+  border-radius: 4px;
 `;
 
 export const SearchInput = styled.input`

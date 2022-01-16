@@ -1,5 +1,6 @@
-const Home = () => {
-  return <div className="fw-bold">Home</div>;
-};
+import React from 'react';
+import { Header } from '../components';
 
-export default Home;
+export default function index() {
+  return <Header />;
+}

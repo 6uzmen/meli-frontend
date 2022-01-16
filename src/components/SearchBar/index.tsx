@@ -11,6 +11,7 @@ export default function SearchBar({ onSearch }: IProps) {
   return (
     <S.SearchBarContainer>
       <S.SearchInput
+        size={1}
         value={searchText}
         placeholder="Nunca dejes de buscar"
         onChange={(e) => setSearchText(e.target.value)}

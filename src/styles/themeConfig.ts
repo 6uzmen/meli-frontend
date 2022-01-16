@@ -3,7 +3,7 @@ import { createGlobalStyle, DefaultTheme } from 'styled-components';
 export const defaultTheme: DefaultTheme = {
   body: '#EEEEEE',
   text: '#333333',
-  header: '#FFF',
+  header: '#FFE600',
   background: '#363537',
   fontFamily: 'Roboto',
 };
@@ -30,6 +30,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   input {
+    padding: 0 20px;
     border: none;
     outline: none;
     color: ${({ theme }) => theme.text};
