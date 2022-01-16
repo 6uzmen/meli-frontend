@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ItemServices } from '../../services';
-import { Card } from '../../components';
+import { Card, ItemPreview } from '../../components';
 
 export default function Index() {
   const router = useRouter();
@@ -18,7 +18,11 @@ export default function Index() {
 
   return (
     <>
-      <Card>{items.map((item, index) => {})}</Card>
+      <Card>
+        {items.map((item, index) => {
+          <ItemPreview key={index} {...item} />;
+        })}
+      </Card>
     </>
   );
 }
