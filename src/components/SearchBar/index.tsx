@@ -5,7 +5,7 @@ interface IProps {
   onSearch: (searchText: string) => void;
 }
 
-export default function SerachBar({ onSearch }: IProps) {
+export default function SearchBar({ onSearch }: IProps) {
   const [searchText, setSearchText] = useState<string>('');
 
   return (

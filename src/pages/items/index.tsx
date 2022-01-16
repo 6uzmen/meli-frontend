@@ -1,5 +1,5 @@
 import React from 'react';
-import SerachBar from '../../components/searchBar';
+import { SearchBar } from '../../components';
 
 export default function index() {
   const handleSearch = (searchText: string) => {
@@ -7,7 +7,7 @@ export default function index() {
   };
   return (
     <div className="w-100">
-      <SerachBar onSearch={handleSearch} />
+      <SearchBar onSearch={handleSearch} />
     </div>
   );
 }
