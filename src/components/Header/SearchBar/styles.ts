@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const SearchBarContainer = styled.div`
   display: flex;
   flex-grow: 1;
 `;
@@ -12,7 +12,8 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  height: 100%;
+  height: 40px;
+  width: 40px;
   background-color: ${(p) => p.theme.body};
 `;
 

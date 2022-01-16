@@ -20,7 +20,18 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  button {
+    outline: none;
+    border: none;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
   input {
+    border: none;
+    outline: none;
     color: ${({ theme }) => theme.text};
   }
 
