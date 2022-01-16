@@ -2,8 +2,8 @@ import React from 'react';
 import * as S from './styled';
 
 interface IProps {
-  children: React.ReactChildren;
-  className: string;
+  children: React.ReactNode;
+  className?: string;
 }
 
 export default function Card({ children, className }: IProps) {
