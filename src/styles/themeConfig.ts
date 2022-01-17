@@ -52,4 +52,8 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     font-size: 46px;
   }   
+
+  .container{
+    max-width: 1100px !important;
+  }
 `;

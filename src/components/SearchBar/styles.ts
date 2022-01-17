@@ -6,7 +6,6 @@ export const SearchBarContainer = styled.div`
   min-width: fit-content;
   overflow: hidden;
   border-radius: 4px;
-  max-width: 1000px;
 `;
 
 export const SearchInput = styled.input`

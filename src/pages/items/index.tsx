@@ -1,8 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ItemServices } from '../../services';
-import { Breadcrumb, Card, ItemPreview } from '../../components';
+import { Breadcrumb, ItemPreview, Spinner } from '../../components';
 import * as S from './styles';
+
+interface IItemsListProps {
+  isLoading: boolean;
+  items: any[];
+}
+
+const ItemsList = ({ isLoading, items }: IItemsListProps) => {
+  if (isLoading) return <Spinner />;
+  if (items)
+    return (
+      <>
+        <Breadcrumb items={[]} />
+        <S.ItemsPreviewContainer>
+          {items.map((item, index) => (
+            <ItemPreview className="ItemPreviewCard" key={item.id} {...item} />
+          ))}
+        </S.ItemsPreviewContainer>
+      </>
+    );
+  return <></>;
+};
 
 export default function Index() {
   const router = useRouter();
@@ -21,24 +42,7 @@ export default function Index() {
 
   return (
     <div className="container">
-      {isLoading ? (
-        `loading`
-      ) : items ? (
-        <>
-          <Breadcrumb items={[]} />
-          <S.ItemsPreviewContainer>
-            {items.map((item, index) => (
-              <ItemPreview
-                className="ItemPreviewCard"
-                key={item.id}
-                {...item}
-              />
-            ))}
-          </S.ItemsPreviewContainer>
-        </>
-      ) : (
-        `No results`
-      )}
+      <ItemsList isLoading={isLoading} items={items} />
     </div>
   );
 }

@@ -53,4 +53,6 @@ export const ItemDetailsDescriptionTitle = styled.h3`
 export const ItemDetailsDescriptionParagraph = styled.p`
   font-size: 16px;
   max-width: 680px;
+  overflow-wrap: break-all;
+  overflow: hidden;
 `;
