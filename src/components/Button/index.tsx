@@ -6,6 +6,6 @@ interface IProps {
   className?: string;
 }
 
-export default function Card({ children, className }: IProps) {
-  return <S.Card className={`${className}`}>{children}</S.Card>;
+export default function Button({ className, children, ...props }: IProps) {
+  return <S.Button {...props}>{children}</S.Button>;
 }
