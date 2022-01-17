@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 import * as S from './styles';
-import { moneyFormatter } from '../../utils';
+import { moneyFormatter } from '../../../utils';
 import Link from 'next/link';
-import shippingIcon from '../../public/assets/ic_shipping.png';
+import shippingIcon from '../../../public/assets/ic_shipping.png';
 
 interface IProps {
   id: string;
@@ -16,7 +16,7 @@ interface IProps {
 
 export default function ItemPreview(props: IProps) {
   return (
-    <Link href={`/items/${props.id}`}>
+    <Link passHref href={`/items/${props.id}`}>
       <S.ItemPreviewContainer>
         <S.ItemPreviewImage
           src={props.picture}

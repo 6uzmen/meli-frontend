@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import * as S from './styles';
 import { useRouter } from 'next/router';
 import { ItemServices } from '../../services';
-import { Card } from '../../components/Card/styles';
-import { ItemDetailsContainer } from './styles';
-import { Breadcrumb, Button } from '../../components';
-import { moneyFormatter } from '../../utils';
+import { ItemDetails, Spinner } from '../../components';
 
-export default function ItemDetail() {
+interface IItemProps {
+  isLoading: boolean;
+  item: any;
+}
+
+const Item = ({ isLoading, item }: IItemProps) => {
+  if (isLoading) return <Spinner />;
+  if (item)
+    return (
+      <>
+        <ItemDetails {...item} />
+      </>
+    );
+  return <>Item not found</>;
+};
+
+export default function Index() {
   const router = useRouter();
   const itemId = router.query.itemId?.toString();
 
@@ -24,36 +35,7 @@ export default function ItemDetail() {
 
   return (
     <div className="container">
-      {isLoading ? (
-        `loading`
-      ) : item ? (
-        <>
-          <Breadcrumb items={[]} />
-          <S.ItemDetailsContainer>
-            <div className="d-flex flex-wrap">
-              <S.ItemDetailsImage src={item.picture} alt="Item image" />
-              <S.ItemDetailsMainInformation>
-                <S.ItemDetailsName>{item.title}</S.ItemDetailsName>
-                <S.ItemDetailsPrice>{`${moneyFormatter(
-                  item.price.amount,
-                  item.price.currency,
-                )}`}</S.ItemDetailsPrice>
-                <Button>Comprar</Button>
-              </S.ItemDetailsMainInformation>
-            </div>
-            <S.ItemDetailsDescriptionContainer>
-              <S.ItemDetailsDescriptionTitle>
-                Descripcion del Producto
-              </S.ItemDetailsDescriptionTitle>
-              <S.ItemDetailsDescriptionParagraph>
-                {item.description}
-              </S.ItemDetailsDescriptionParagraph>
-            </S.ItemDetailsDescriptionContainer>
-          </S.ItemDetailsContainer>
-        </>
-      ) : (
-        `Item not found`
-      )}
+      <Item isLoading={isLoading} item={item} />
     </div>
   );
 }
