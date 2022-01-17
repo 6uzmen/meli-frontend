@@ -14,8 +14,7 @@ export const ItemPreviewContainer = styled.div`
 
 export const ItemPreviewImage = styled.img`
   object-fit: contain;
-  flex-grow: 1;
-  flex-shrink: 4;
+  min-width: 180px;
   flex-basis: 100px;
 `;
 
