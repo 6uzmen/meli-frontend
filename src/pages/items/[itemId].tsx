@@ -23,7 +23,9 @@ export default function ItemDetail() {
 
   return (
     <div className="container">
-      {item && (
+      {isLoading ? (
+        `loading`
+      ) : item ? (
         <S.ItemDetailsContainer>
           <div className="d-flex flex-wrap">
             <Image
@@ -48,6 +50,8 @@ export default function ItemDetail() {
             </S.ItemDetailsDescriptionParagraph>
           </S.ItemDetailsDescriptionContainer>
         </S.ItemDetailsContainer>
+      ) : (
+        `Item not found`
       )}
     </div>
   );

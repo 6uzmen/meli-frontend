@@ -7,6 +7,8 @@ export const ItemDetailsContainer = styled(Card)`
 
 export const ItemDetailsMainInformation = styled.div`
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding: 32px;
 `;
 
