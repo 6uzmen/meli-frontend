@@ -6,6 +6,7 @@ export const ItemPreviewContainer = styled.div`
   background-color: white;
   border-radius: 4px;
   display: flex;
+  flex-wrap: wrap;
   .itemPreviewImage {
     border-radius: 4px;
   }
@@ -13,10 +14,16 @@ export const ItemPreviewContainer = styled.div`
 
 export const ItemPreviewImage = styled.img`
   object-fit: contain;
+  flex-grow: 1;
+  flex-shrink: 4;
+  flex-basis: 100px;
 `;
 
 export const ItemPreviewInformation = styled.div`
-  flex-grow: 1;
+  flex-grow: 4;
+  flex-shrink: 1;
+  flex-basis: 100px;
+  min-width: 60%;
   padding: 16px;
 `;
 
@@ -39,6 +46,5 @@ export const ItemPreviewPrice = styled.h2`
 
 export const ItemPreviewDescription = styled.p`
   font-size: 18px;
-  flex-basis: 50%;
-  flex-grow: 1;
+  max-width: 400px;
 `;
