@@ -14,13 +14,13 @@ export default function Header() {
   };
 
   return (
-    <S.HeaderContainer>
-      <div className="d-flex flex-wrap container">
+    <S.HeaderWrapper>
+      <S.HeaderContainer className="container">
         <S.LogoWrapper>
           <Image src={logoImage} alt="Mercadolibre Logo" />
         </S.LogoWrapper>
         <SearchBar onSearch={handleSearch} />
-      </div>
-    </S.HeaderContainer>
+      </S.HeaderContainer>
+    </S.HeaderWrapper>
   );
 }
