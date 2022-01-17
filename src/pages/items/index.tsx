@@ -6,15 +6,17 @@ import * as S from './styles';
 
 export default function Index() {
   const router = useRouter();
-  const searchString = router.query.search || '';
+  const searchString = router.query.search;
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [items, setItems] = useState<any | undefined>();
 
   useEffect(() => {
-    setIsLoading(true);
-    ItemServices.getItems(searchString.toString())
-      .then((res) => setItems(res.data.items))
-      .finally(() => setIsLoading(false));
+    if (searchString) {
+      setIsLoading(true);
+      ItemServices.getItems(searchString.toString())
+        .then((res) => setItems(res.data.items))
+        .finally(() => setIsLoading(false));
+    }
   }, [searchString]);
 
   return (
