@@ -3,3 +3,5 @@ export { default as Header } from './Header';
 export { default as Head } from './Head';
 export { default as Card } from './Card';
 export { default as ItemPreview } from './ItemPreview';
+export { default as Button } from './Button';
+export { default as Breadcrumb } from './Breadcrumb';

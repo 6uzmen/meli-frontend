@@ -4,8 +4,9 @@ export const defaultTheme: DefaultTheme = {
   body: '#EEEEEE',
   text: '#333333',
   header: '#FFE600',
-  background: '#363537',
   fontFamily: 'Roboto',
+  buttonPrimary: '#3483FA',
+  buttonDisabled: '#999999',
 };
 
 export const GlobalStyles = createGlobalStyle`
