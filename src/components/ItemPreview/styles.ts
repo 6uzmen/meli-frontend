@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ItemPreviewContainer = styled.div`
+  cursor: pointer;
   padding: 16px;
   display: flex;
   .itemPreviewImage {
@@ -9,7 +10,7 @@ export const ItemPreviewContainer = styled.div`
 `;
 
 export const ItemPreviewInformation = styled.div`
-  padding: 16px 0;
+  padding: 16px;
 `;
 
 export const ItemPreviewLocation = styled.span`
@@ -17,8 +18,13 @@ export const ItemPreviewLocation = styled.span`
   opacity: 0.55;
 `;
 
+export const ItemPreviewPriceContainer = styled.div`
+  margin-bottom: 32px;
+`;
+
 export const ItemPreviewPrice = styled.h2`
   font-size: 24px;
+  margin: 0;
 `;
 
 export const ItemPreviewDescription = styled.p`

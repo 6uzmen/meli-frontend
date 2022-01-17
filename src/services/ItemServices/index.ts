@@ -5,7 +5,7 @@ const BASE_PATH = '/items';
 
 export const getItems = async (
   searchString: string,
-): Promise<AxiosResponse<[]> | undefined> => {
+): Promise<AxiosResponse<any> | undefined> => {
   return unAuthAxiosCall(`${BASE_PATH}?q=${searchString}`, {
     method: 'GET',
     headers: {

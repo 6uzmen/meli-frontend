@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Card } from '../../components';
 
+export const ItemsPreviewContainer = styled(Card)``;
+
 export const ItemDetailsContainer = styled(Card)`
   padding: 32px;
 `;
