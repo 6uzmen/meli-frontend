@@ -16,6 +16,7 @@ export const ItemDetailsMainInformation = styled.div`
 
 export const ItemDetailsImage = styled.img`
   object-fit: contain;
+  object-position: left;
 `;
 
 export const ItemDetailsName = styled.h2`
@@ -29,7 +30,7 @@ export const ItemDetailsPrice = styled.h2`
 `;
 
 export const ItemDetailsDescriptionContainer = styled.div`
-  padding: 32px;
+  padding: 32px 0;
 `;
 
 export const ItemDetailsDescriptionTitle = styled.h3`
