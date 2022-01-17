@@ -26,7 +26,11 @@ export default function Index() {
           <Breadcrumb items={[]} />
           <S.ItemsPreviewContainer>
             {items.map((item, index) => (
-              <ItemPreview key={item.id} {...item} />
+              <ItemPreview
+                className="ItemPreviewCard"
+                key={item.id}
+                {...item}
+              />
             ))}
           </S.ItemsPreviewContainer>
         </>

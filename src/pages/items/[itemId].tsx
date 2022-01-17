@@ -30,13 +30,8 @@ export default function ItemDetail() {
         <>
           <Breadcrumb items={[]} />
           <S.ItemDetailsContainer>
-            <div className="d-flex">
-              <S.ItemDetailsImage
-                src={item.picture}
-                width={650}
-                height={400}
-                alt="Item image"
-              />
+            <div className="d-flex flex-wrap">
+              <S.ItemDetailsImage src={item.picture} alt="Item image" />
               <S.ItemDetailsMainInformation>
                 <S.ItemDetailsName>{item.title}</S.ItemDetailsName>
                 <S.ItemDetailsPrice>{`${moneyFormatter(

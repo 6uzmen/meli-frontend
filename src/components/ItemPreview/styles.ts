@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const ItemPreviewContainer = styled.div`
   cursor: pointer;
   padding: 16px;
+  background-color: white;
+  border-radius: 4px;
   display: flex;
   .itemPreviewImage {
     border-radius: 4px;
@@ -37,4 +39,6 @@ export const ItemPreviewPrice = styled.h2`
 
 export const ItemPreviewDescription = styled.p`
   font-size: 18px;
+  flex-basis: 50%;
+  flex-grow: 1;
 `;
