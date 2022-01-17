@@ -19,8 +19,10 @@ export default function ItemDetails(props: IProps) {
       <Breadcrumb items={[]} />
       <S.ItemDetailsContainer>
         <div className="d-flex flex-wrap">
-          <S.ItemDetailsImage src={props.picture} alt="Item image" />
-          <S.ItemDetailsMainInformation>
+          <S.ItemDetailsImageWrapper className="col-12 col-md-8">
+            <S.ItemDetailsImage src={props.picture} alt="Item image" />
+          </S.ItemDetailsImageWrapper>
+          <S.ItemDetailsMainInformation className="col-12 col-md-4">
             <S.ItemDetailsName>{props.title}</S.ItemDetailsName>
             <S.ItemDetailsPrice>{`${moneyFormatter(
               props.price.amount,
