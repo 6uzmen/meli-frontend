@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { ItemServices } from '../../services';
-import { Card, ItemPreview } from '../../components';
+import { Breadcrumb, Card, ItemPreview } from '../../components';
+import * as S from './styles';
 
 export default function Index() {
   const router = useRouter();
@@ -12,17 +13,26 @@ export default function Index() {
   useEffect(() => {
     setIsLoading(true);
     ItemServices.getItems(searchString)
-      .then((items) => setItems(items))
+      .then((res) => setItems(res.data.items))
       .finally(() => setIsLoading(false));
   }, [searchString]);
 
   return (
     <div className="container">
-      <Card>
-        {items?.map((item, index) => {
-          <ItemPreview key={index} {...item} />;
-        })}
-      </Card>
+      {isLoading ? (
+        `loading`
+      ) : items ? (
+        <>
+          <Breadcrumb items={[]} />
+          <S.ItemsPreviewContainer>
+            {items.map((item, index) => (
+              <ItemPreview key={item.id} {...item} />
+            ))}
+          </S.ItemsPreviewContainer>
+        </>
+      ) : (
+        `No results`
+      )}
     </div>
   );
 }

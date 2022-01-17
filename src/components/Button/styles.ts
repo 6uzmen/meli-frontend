@@ -8,4 +8,5 @@ export const Button = styled.button`
   height: 46px;
   color: white;
   background-color: ${(p) => p.theme.buttonPrimary};
+  border-radius: 4px;
 `;

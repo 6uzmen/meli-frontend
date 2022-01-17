@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Card } from '../../components';
 
+export const ItemsPreviewContainer = styled(Card)``;
+
 export const ItemDetailsContainer = styled(Card)`
   padding: 32px;
 `;
@@ -10,6 +12,10 @@ export const ItemDetailsMainInformation = styled.div`
   display: flex;
   flex-direction: column;
   padding: 32px;
+`;
+
+export const ItemDetailsImage = styled.img`
+  object-fit: cover;
 `;
 
 export const ItemDetailsName = styled.h2`
@@ -33,5 +39,5 @@ export const ItemDetailsDescriptionTitle = styled.h3`
 
 export const ItemDetailsDescriptionParagraph = styled.p`
   font-size: 16px;
-  max-width: 400px;
+  max-width: 680px;
 `;
