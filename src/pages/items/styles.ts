@@ -15,7 +15,7 @@ export const ItemDetailsMainInformation = styled.div`
 `;
 
 export const ItemDetailsImage = styled.img`
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const ItemDetailsName = styled.h2`

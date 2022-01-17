@@ -30,7 +30,7 @@ export default function ItemDetail() {
         <>
           <Breadcrumb items={[]} />
           <S.ItemDetailsContainer>
-            <div className="d-flex flex-wrap">
+            <div className="d-flex">
               <S.ItemDetailsImage
                 src={item.picture}
                 width={650}

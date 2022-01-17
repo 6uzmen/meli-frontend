@@ -10,10 +10,11 @@ export const ItemPreviewContainer = styled.div`
 `;
 
 export const ItemPreviewImage = styled.img`
-  object-fit: cover;
+  object-fit: contain;
 `;
 
 export const ItemPreviewInformation = styled.div`
+  flex-grow: 1;
   padding: 16px;
 `;
 
@@ -23,12 +24,15 @@ export const ItemPreviewLocation = styled.span`
 `;
 
 export const ItemPreviewPriceContainer = styled.div`
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
   margin-bottom: 16px;
 `;
 
 export const ItemPreviewPrice = styled.h2`
   font-size: 24px;
-  margin: 0;
+  margin: 0 10px 0 0;
 `;
 
 export const ItemPreviewDescription = styled.p`
