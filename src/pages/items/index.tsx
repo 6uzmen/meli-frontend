@@ -16,7 +16,6 @@ export default function Index() {
       .then((res) => setItems(res.data.items))
       .finally(() => setIsLoading(false));
   }, [searchString]);
-  console.log(items);
 
   return (
     <div className="container">

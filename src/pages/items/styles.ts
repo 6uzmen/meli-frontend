@@ -14,6 +14,10 @@ export const ItemDetailsMainInformation = styled.div`
   padding: 32px;
 `;
 
+export const ItemDetailsImage = styled.img`
+  object-fit: cover;
+`;
+
 export const ItemDetailsName = styled.h2`
   font-size: 24px;
   margin-bottom: 32px;
@@ -35,5 +39,5 @@ export const ItemDetailsDescriptionTitle = styled.h3`
 
 export const ItemDetailsDescriptionParagraph = styled.p`
   font-size: 16px;
-  max-width: 400px;
+  max-width: 680px;
 `;

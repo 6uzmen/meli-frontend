@@ -9,6 +9,10 @@ export const ItemPreviewContainer = styled.div`
   }
 `;
 
+export const ItemPreviewImage = styled.img`
+  object-fit: cover;
+`;
+
 export const ItemPreviewInformation = styled.div`
   padding: 16px;
 `;
@@ -19,7 +23,7 @@ export const ItemPreviewLocation = styled.span`
 `;
 
 export const ItemPreviewPriceContainer = styled.div`
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 `;
 
 export const ItemPreviewPrice = styled.h2`
