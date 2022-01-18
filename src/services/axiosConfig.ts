@@ -1,10 +1,6 @@
 import axios from 'axios';
 
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL?.toString() ||
-  'https://meli-backend-vs8cf.ondigitalocean.app/apidd';
-
-console.log(API_URL);
+const API_URL = process.env.NEXT_PUBLIC_API_URL?.toString() || '';
 
 const axiosInstance = axios.create({
   headers: {
