@@ -6,9 +6,9 @@
 
 This project uses the following environment variables:
 
-| Name              | Default Value             |
-| ----------------- | ------------------------- |
-| REACT_APP_API_URL | http://localhost:3001/api |
+| Name                | Default Value |
+| ------------------- | ------------- |
+| NEXT_PUBLIC_API_URL |               |
 
 # Pre-requisites
 
