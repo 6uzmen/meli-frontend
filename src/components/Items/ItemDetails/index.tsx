@@ -20,7 +20,7 @@ export default function ItemDetails(props: IProps) {
 
   let extraInformation = `${props.condition}`;
   if (soldQuantity > 0) {
-    extraInformation = extraInformation + ` ${soldQuantity} vendidos`;
+    extraInformation = extraInformation + ` · ${soldQuantity} vendidos`;
   }
 
   return (

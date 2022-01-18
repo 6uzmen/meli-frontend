@@ -9,7 +9,11 @@ interface IProps {
 
 export default function SearchBar({ onSearch }: IProps) {
   const [searchText, setSearchText] = useState<string>('');
-
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      onSearch(searchText);
+    }
+  };
   return (
     <S.SearchBarContainer>
       <S.SearchInput
@@ -17,6 +21,7 @@ export default function SearchBar({ onSearch }: IProps) {
         value={searchText}
         placeholder="Nunca dejes de buscar"
         onChange={(e) => setSearchText(e.target.value)}
+        onKeyDown={handleKeyDown}
       />
       <S.SearchButton onClick={() => onSearch(searchText)}>
         <Image src={searchIcon} alt="search_icon" />
