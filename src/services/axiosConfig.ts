@@ -1,8 +1,10 @@
 import axios from 'axios';
 
 const API_URL =
-  process.env.REACT_APP_API_URL?.toString() ||
-  'https://meli-backend-vs8cf.ondigitalocean.app/api';
+  process.env.NEXT_PUBLIC_API_URL?.toString() ||
+  'https://meli-backend-vs8cf.ondigitalocean.app/apidd';
+
+console.log(API_URL);
 
 const axiosInstance = axios.create({
   headers: {
