@@ -7,14 +7,15 @@ import * as S from './styles';
 interface IItemsListProps {
   isLoading: boolean;
   items: any[];
+  categories: string[];
 }
 
-const ItemsList = ({ isLoading, items }: IItemsListProps) => {
+const ItemsList = ({ isLoading, items, categories }: IItemsListProps) => {
   if (isLoading) return <Spinner />;
   if (items)
     return (
       <>
-        <Breadcrumb items={[]} />
+        <Breadcrumb items={categories} />
         <S.ItemsPreviewContainer>
           {items.map((item, index) => (
             <ItemPreview className="ItemPreviewCard" key={item.id} {...item} />
@@ -30,13 +31,17 @@ export default function Index() {
   const searchString = router.query.search;
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [items, setItems] = useState<any | undefined>();
+  const [categories, setCategories] = useState<any | undefined>();
 
   console.log(searchString);
   useEffect(() => {
     if (searchString) {
       setIsLoading(true);
       ItemServices.getItems(searchString.toString())
-        .then((res) => setItems(res.data.items))
+        .then((res) => {
+          setItems(res.data.items);
+          setCategories(res.data.categories);
+        })
         .finally(() => setIsLoading(false));
     }
   }, [searchString]);
@@ -44,7 +49,7 @@ export default function Index() {
   console.log(items);
   return (
     <div className="container">
-      <ItemsList isLoading={isLoading} items={items} />
+      <ItemsList isLoading={isLoading} items={items} categories={categories} />
     </div>
   );
 }

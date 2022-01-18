@@ -53,7 +53,13 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 46px;
   }   
 
-  .container{
+  ul {
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+  }
+
+  .container {
     max-width: 1100px !important;
   }
 `;

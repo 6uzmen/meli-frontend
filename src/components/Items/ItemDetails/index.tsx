@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, Button } from '../..';
+import { Button } from '../..';
 import { moneyFormatter } from '../../../utils';
 import * as S from './styles';
 
@@ -25,7 +25,6 @@ export default function ItemDetails(props: IProps) {
 
   return (
     <>
-      <Breadcrumb items={[]} />
       <S.ItemDetailsContainer>
         <div className="d-flex flex-wrap">
           <S.ItemDetailsImageWrapper className="col-12 col-md-7 col-lg-8">

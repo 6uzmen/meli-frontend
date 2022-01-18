@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { ItemServices } from '../../services';
-import { ItemDetails, Spinner } from '../../components';
+import { Breadcrumb, ItemDetails, Spinner } from '../../components';
 
 interface IItemProps {
   isLoading: boolean;
@@ -13,6 +13,7 @@ const Item = ({ isLoading, item }: IItemProps) => {
   if (item)
     return (
       <>
+        <Breadcrumb items={item.categories} />
         <ItemDetails {...item} />
       </>
     );
@@ -32,6 +33,7 @@ export default function Index() {
       .then((res) => setItem(res.data.item))
       .finally(() => setIsLoading(false));
   }, [itemId]);
+  console.log(item);
 
   return (
     <div className="container">
