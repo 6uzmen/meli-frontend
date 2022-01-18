@@ -7,8 +7,9 @@ interface IProps {
   picture: string;
   title: string;
   price: {
-    amount: number;
+    amount: string;
     currency: string;
+    decimals: string;
   };
   description: string;
   condition: string;
@@ -35,10 +36,15 @@ export default function ItemDetails(props: IProps) {
               {extraInformation}
             </S.ItemDetailsExtraInformation>
             <S.ItemDetailsName>{props.title}</S.ItemDetailsName>
-            <S.ItemDetailsPrice>{`${moneyFormatter(
-              props.price.amount,
-              props.price.currency,
-            )}`}</S.ItemDetailsPrice>
+            <S.ItemDetailsWrapper>
+              <S.ItemDetailsPrice>{`${moneyFormatter(
+                props.price.amount,
+                props.price.currency,
+              )}`}</S.ItemDetailsPrice>
+              <S.ItemDetailsPriceDecimals>
+                {props.price.decimals}
+              </S.ItemDetailsPriceDecimals>
+            </S.ItemDetailsWrapper>
             <Button>Comprar</Button>
           </S.ItemDetailsMainInformation>
         </div>

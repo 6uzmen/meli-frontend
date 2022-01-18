@@ -1,4 +1,4 @@
-export const moneyFormatter = (amount: number, currency) => {
+export const moneyFormatter = (amount: string | number, currency) => {
   const formatter = new Intl.NumberFormat('es-AR', {
     style: 'currency',
     currency: currency,
@@ -6,5 +6,11 @@ export const moneyFormatter = (amount: number, currency) => {
     minimumFractionDigits: 0,
     currencyDisplay: 'symbol',
   });
-  return formatter.format(amount);
+
+  if (
+    typeof amount === 'number' ||
+    (typeof amount === 'string' && !isNaN(parseFloat(amount)))
+  ) {
+    return formatter.format(Number(amount));
+  }
 };

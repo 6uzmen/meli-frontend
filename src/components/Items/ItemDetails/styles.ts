@@ -35,9 +35,18 @@ export const ItemDetailsExtraInformation = styled.div`
   color: #999;
 `;
 
+export const ItemDetailsWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 32px;
+`;
+
 export const ItemDetailsPrice = styled.h2`
   font-size: 46px;
-  margin-bottom: 32px;
+`;
+
+export const ItemDetailsPriceDecimals = styled.span`
+  font-size: 24px;
 `;
 
 export const ItemDetailsDescriptionContainer = styled.div`
