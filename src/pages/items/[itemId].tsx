@@ -33,7 +33,6 @@ export default function Index() {
       .then((res) => setItem(res.data.item))
       .finally(() => setIsLoading(false));
   }, [itemId]);
-  console.log(item);
 
   return (
     <div className="container">

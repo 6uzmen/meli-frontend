@@ -6,7 +6,6 @@ interface IProps {
 }
 
 export default function Breadcrumb({ items }: IProps) {
-  console.log(items.length);
   return (
     <S.BreadcrumbContainer>
       {items.map((item, index) => {
