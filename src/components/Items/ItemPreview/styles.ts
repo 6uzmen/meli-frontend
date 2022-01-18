@@ -7,15 +7,12 @@ export const ItemPreviewContainer = styled.div`
   border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
-  .itemPreviewImage {
-    border-radius: 4px;
-  }
 `;
 
 export const ItemPreviewImage = styled.img`
   object-fit: contain;
   min-width: 180px;
-  flex-basis: 100px;
+  border-radius: 4px;
 `;
 
 export const ItemPreviewInformation = styled.div`
@@ -29,12 +26,14 @@ export const ItemPreviewInformation = styled.div`
 export const ItemPreviewLocation = styled.span`
   font-size: 12px;
   opacity: 0.55;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ItemPreviewPriceContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-grow: 1;
   margin-bottom: 16px;
 `;
 

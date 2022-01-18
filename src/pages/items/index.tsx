@@ -31,6 +31,7 @@ export default function Index() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [items, setItems] = useState<any | undefined>();
 
+  console.log(searchString);
   useEffect(() => {
     if (searchString) {
       setIsLoading(true);
@@ -40,6 +41,7 @@ export default function Index() {
     }
   }, [searchString]);
 
+  console.log(items);
   return (
     <div className="container">
       <ItemsList isLoading={isLoading} items={items} />

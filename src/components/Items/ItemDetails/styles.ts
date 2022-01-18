@@ -8,9 +8,9 @@ export const ItemDetailsContainer = styled(Card)`
 export const ItemDetailsImageWrapper = styled.div``;
 
 export const ItemDetailsImage = styled.img`
-  width: 100%;
-  max-height: 680px;
   max-width: 680px;
+  max-height: 680px;
+  width: 100%;
   object-fit: contain;
   object-position: center;
 `;
@@ -18,8 +18,8 @@ export const ItemDetailsImage = styled.img`
 export const ItemDetailsMainInformation = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 32px;
-  @media (max-width: 1000px) {
+  padding: 0 0 0 32px;
+  @media (max-width: 768px) {
     padding: 32px 0;
   }
 `;
@@ -27,6 +27,12 @@ export const ItemDetailsMainInformation = styled.div`
 export const ItemDetailsName = styled.h2`
   font-size: 24px;
   margin-bottom: 32px;
+`;
+
+export const ItemDetailsExtraInformation = styled.div`
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #999;
 `;
 
 export const ItemDetailsPrice = styled.h2`
@@ -48,4 +54,5 @@ export const ItemDetailsDescriptionParagraph = styled.p`
   max-width: 680px;
   overflow-wrap: break-all;
   overflow: hidden;
+  color: #999;
 `;
